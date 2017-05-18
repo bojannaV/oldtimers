@@ -5,7 +5,7 @@
 
     <nav>
         <ul class="nav nav-justified">
-            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="#">Uber mich</a></li>
             <li><a href="#">Garage</a></li>
             <li><a href="#">Ausfarht</a></li>

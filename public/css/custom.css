@@ -1,3 +1,8 @@
  /*color:#adaa5e;*/
 
+.car__gallery figure figcaption.car-caption{
+    background: #c3c188;; color: 0A1429; font-weight: bold; font-family: Libre Franklin;
+    font-size: 10px; width: 86%; margin-top: -7%; margin-left: 1%; position: absolute;
+}
+
 
