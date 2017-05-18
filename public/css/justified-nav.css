@@ -1,0 +1,185 @@
+ /*background: transparent #2952a3*/
+ /*color:#adaa5e;*/
+ /*#f8e8b3*/
+
+ @font-face{
+  font-family: "Gordana";
+  src: url('../fonts/corporate.otf') format('opentype');
+ }
+
+ body {padding-top:40px; padding-bottom: 30px; background: #000;
+    font-family: "Gordana", serif;}
+
+
+.masthead{margin-bottom: 12px;}
+.masthead h1{color: #c3c188; letter-spacing: 5px}
+.masthead p{ margin-bottom: 40px; color: #c3c188; letter-spacing: 5px}
+
+.jumbotron {
+  padding: 10px; text-align: center;;
+  background-color: #000; /* Old browsers */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e5e5e5));
+  background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background-image:      -o-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background-image:         linear-gradient(to bottom, #1f3d7a 30%,  #4775d1 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+  background-repeat: repeat-x; /* Repeat the gradient */
+}
+
+.jumbotron h1{margin-bottom: 20px;font-family: 'Dancing Script', cursive; font-size: 28px;
+  color: #c3c188; filter: grayscale(30%);}
+.jumbotron .btn {
+  padding: 14px 24px;
+  font-size: 21px;
+}
+
+.flexslider{margin: 30px; border: 12px groove  #daa520;  filter: grayscale(70%);  }
+.flex-viewport{background: #606060;; filter: /*grayscale(30%);*/}
+.flex-viewport ul.slides li {margin-right: 3px !important;}
+
+.nav-justified {
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  /*border-right: none;*/
+  /*border-left: none;*/
+}
+.nav-justified > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: normal;
+  /* letter-spacing: 1px; */
+  color: #cdcb98;
+  text-align: center;
+  margin-left: 10px;
+  background-color: #000; /* Old browsers */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e5e5e5));
+  background-image: -webkit-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background-image:      -o-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%);
+  background-image:         linear-gradient(to bottom,#0a1429 50%,#0f1f3d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
+  background-repeat: repeat-x; /* Repeat the gradient */
+  border: 1px solid #444;
+}
+.nav-justified > .active > a,
+.nav-justified > .active > a:hover,
+.nav-justified > .active > a:focus {
+  color: /*red*/;
+}
+.nav-justified > li:first-child > a {
+  border-radius: 5px 5px 0 0;
+}
+.nav-justified > li:last-child > a {
+  border-bottom: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+@media (min-width: 768px) {
+  .nav-justified {
+    max-height: 52px;
+  }
+  .nav-justified > li > a {
+    /* border-right: 1px solid #d5d5d5; */
+    /* border-left: 1px solid #fff; */
+  }
+  .nav-justified > li:first-child > a {
+    border-left: 0;
+    border-radius: 5px 0 0 5px;
+  }
+  .nav-justified > li:last-child > a {
+    border-right: 0;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+/*.introduction h2{color:#888544; font-family: Gabriela; font-size: 24px}*/
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #eee;
+}
+
+.ribbon {
+  position: absolute;
+  left: 10px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.ribbon span {
+  font-family: Libre Franklin;
+  font-size: 10px;
+  font-weight: bold;
+  color: #811818;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#666433 0%, #C3C188 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; left: -21px;
+}
+.ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #C3C188;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #C3C188;
+}
+.ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #C3C188;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #C3C188;
+}
+
+
+figure.overlay {
+position: relative;
+width: 100%;
+z-index: 1;
+}
+figure.overlay img {width: 100% }
+
+figure.overlay figcaption {
+position: absolute;
+z-index: 1000;
+height: 100%;
+width: 100%;
+top: 0;
+/**optional background overlay**/
+/*background: rgba(255,255,255,0.2);*/
+/**text, adjust all values as desired**/
+padding: 57% 2% 0 2%;
+font-weight: 700;
+color: purple;
+/**some fallback value**/
+font-size: 16px;
+/**responsive size is roughly 3.4%  of the device's viewport width**/
+/*font-size: 3.4vw;*/
+}
+
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
