@@ -46,7 +46,7 @@
                 </figure>
             </div>
         </div>
-        <div class="row" style="margin-top: 30px;">
+        <div class="row">
             <div class="col-md-3 car__gallery">
                 <figure class="figure box">
                     <img src="{{ asset('images/framed/car1.jpg') }}" class="image img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
