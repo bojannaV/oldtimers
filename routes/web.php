@@ -11,3 +11,7 @@ Route::get('/admin', function(){
 Route::name('cars.index')->get('cars', function(){
     return view('cars.index');
 });
+
+Route::name('pages.contact')->get('contact', function(){
+    return view('pages.contact');
+});
