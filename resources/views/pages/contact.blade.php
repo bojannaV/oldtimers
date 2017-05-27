@@ -1,8 +1,11 @@
 @extends('layouts.master')
 
+@section('title', '| Kontakt')
+
 @section('links')
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Parisienne" rel="stylesheet">
     <link href="{{ asset('vendor/lightbox/dist/css/lightbox.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('vendor/parsley/parsley.css') }}" rel="stylesheet">
 @endsection
 
 @section('jumbotron')
@@ -11,76 +14,50 @@
             <span>+ 49-160-8401080</span>
         </p>
 
+        @include('errors._list')
+        @include('flash::message')
+
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-6" id="contact__column">
                 <div class="row">
-                    <div class="col-sm-6 contact__box left">
+                    <div class="col-md-6">
+                        <img src="{{ asset('images/garage/garage1.jpg') }}" alt="" class="image">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ asset('images/garage/garage2.jpg') }}" alt="" class="image">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" id="map__column">
+                <div class="flex">
+                    <div class="contact__box left  flex-1">
                         <p class="text-center">
                             <i class="fa fa-envelope" aria-hidden="true"></i>
                         </p>
                         <p class="text-center">
                             info@sterntimer.de
-                            <p></p>
                         </p>
                     </div>
-                    <div class="col-sm-6 contact__box center">
+                    <div class="contact__box right  flex-1" >
                         <p class="text-center">
                             <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
                         </p>
                         <p class="text-center">
-                            70178 Augustenstrasse, Stuttgart, DE
+                            Augustenstrasse, 70178 Stuttgart, DE
                         </p>
-                    </div>
-                    <!-- <div class="col-sm-4 contact__box right">
-                        <p class="text-center">
-                            <i class="fa fa-phone" aria-hidden="true"></i>
-                        </p>
-                        <p class="text-center" style="color: #111;">
-                            + 49-160-8401080
-                        </p>
-                    </div> -->
-                </div><!-- first row -->
-                <div class="row">
-                    <form action="" class="POST" id="contactForm">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="name">Ihr name</label>
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="Enter Your Name">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="email">Ihr E-mail</label>
-                                    <input type="text" name="email" id="email" class="form-control" placeholder="example@domain.com">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" name="subject" id="subject" class="form-control" placeholder="Enter subject">
-                        </div>
-                        <div class="form-group">
-                            <label for="body">Message</label>
-                            <textarea name="body" id="body" class="form-control" rows="6" placeholder="Enter your message"></textarea>
-                        </div>
-                        <button type="button" class="btn btn-default">
-                            <i class="fa fa-paper-plane-o" aria-hidden="true"></i> Send
-                        </button>
-                    </form>
-                </div><!-- second row -->
-            </div><!-- left-col -->
-
-            <div class="col-md-6" style="padding-left: 50px;">
-                <div class="row">
-                    <div class="flex justify-between">
-                        <img src="{{ asset('images/garage/garage1.jpg') }}" alt="">
-                        <img src="{{ asset('images/garage/garage2.jpg') }}" alt="">
                     </div>
                 </div>
+
                 <div class="row">
-                    <div id="map">
-                        google map
+                    <div class="col-md-12">
+                        @include('pages.forms._contact')
                     </div>
                 </div>
             </div>
@@ -90,6 +67,7 @@
 
 @section('scripts')
     <script src="{{ asset('vendor/lightbox/dist/js/lightbox.min.js') }}"></script>
+    <script src="{{ asset('vendor/parsley/parsley.min.js') }}"></script>
     <script>
         lightbox.option({
             'wrapAround': true,
@@ -99,19 +77,21 @@
     </script>
 
     <script>
-      function initMap() {
-        var uluru = {lat: -25.363, lng: 131.044};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
+          function initMap() {
+            var myLatLng = {lat: 48.770708, lng: 9.162106};
+
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 15,
+              center: myLatLng
+            });
+
+            var marker = new google.maps.Marker({
+              position: myLatLng,
+              map: map,
+              title: 'Thorsten von der Ohe'
+            });
+          }
     </script>
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFecf0ILfomINJMqC9ygIsxv04LK9Y1UkY&callback=initMap">
-    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key={{ config('services.google.key') }}&callback=initMap"
+    async defer></script>
 @endsection

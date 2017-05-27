@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', '| Garage')
+
 @section('links')
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
     <link href="{{ asset('vendor/lightbox/dist/css/lightbox.min.css') }}" rel="stylesheet">

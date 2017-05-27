@@ -5,13 +5,13 @@
 
     <nav>
         <ul class="nav nav-justified">
-            <li><a href="#">Home</a></li>
+            <li><a href="{{ route('pages.index') }}">Home</a></li>
             <li><a href="#">Uber mich</a></li>
-            <li><a href="#">Garage</a></li>
+            <li><a href="{{ route('cars.index') }}">Garage</a></li>
             <li><a href="#">Ausfarht</a></li>
             <li><a href="#">Rundum-Service</a></li>
             <li><a href="#">Wissenwertes</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="{{ route('pages.contact') }}">Kontakt</a></li>
         </ul>
     </nav>
 </div>

@@ -1,8 +1,6 @@
 <?php
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::name('pages.index')->get('/', 'PageController@index');
 
 Route::get('/admin', function(){
     return view('admin.dashboard');
@@ -12,6 +10,5 @@ Route::name('cars.index')->get('cars', function(){
     return view('cars.index');
 });
 
-Route::name('pages.contact')->get('contact', function(){
-    return view('pages.contact');
-});
+Route::name('pages.contact')->get('kontakt', 'PageController@contact');
+Route::name('pages.store.contact')->post('kontakt', 'PageController@storeContact');

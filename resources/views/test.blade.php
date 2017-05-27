@@ -1,59 +1,24 @@
-    <div class="col-md-3 car__gallery">
-        <figure class="figure box">
-            <img src="{{ asset('images/framed/car1.jpg') }}" class="image img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
-            <figcaption class="car-caption">
-                1986 560 SL - 36.800 km
-            </figcaption>
-            <div class="ribbon">
-                <span>Verkauft</span>
-            </div>
-        </figure>
+<div class="flex">
+    <div class="contact__box left  flex-1">
+        <p class="text-center">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+        </p>
+        <p class="text-center">
+            info@sterntimer.de
+        </p>
     </div>
-    <div class="col-md-3 car__gallery">
-        <figure class="figure box">
-            <img src="{{ asset('images/framed/car2.jpg') }}" class="image img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
-            <figcaption class="car-caption">
-                1986 560 SL - 36.800 km
-            </figcaption>
-        </figure>
-    </div>
-    <div class="col-md-3 car__gallery">
-        <figure class="figure box">
-            <img src="{{ asset('images/framed/car3.jpg') }}" class="image img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
-            <figcaption class="car-caption">
-                1986 560 SL - 36.800 km
-            </figcaption>
-            <div class="ribbon">
-                <span>Verkauft</span>
-            </div>
-        </figure>
-    </div>
-    <div class="col-md-3 car__gallery">
-        <figure class="figure box">
-            <img src="{{ asset('images/framed/car4.jpg') }}" class="image img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
-            <figcaption class="car-caption">
-                1986 560 SL - 36.800 km
-            </figcaption>
-        </figure>
+    <div class="contact__box right  flex-1" >
+        <p class="text-center">
+            <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+        </p>
+        <p class="text-center">
+            Augustenstrasse, 70178 Stuttgart, DE
+        </p>
     </div>
 </div>
-<div class="row bottom">
-    <div class="col-md-3 car__gallery">
-        <figure class="figure box">
-            <img src="{{ asset('images/framed/car1.jpg') }}" class="image img-fluid" alt="A generic square placeholder image with rounded corners in a figure.">
-            <figcaption class="car-caption">
-                1986 560 SL - 36.800 km
-            </figcaption>
-            <div class="ribbon">
-                <span>Verkauft</span>
-            </div>
-        </figure>
+
+<div class="row">
+    <div class="col-md-12">
+        @include('pages.forms._contact')
     </div>
-    <div class="col-md-3">
-        <figure class="overlay">
-            <img src="{{ asset('images/framed/car4.jpg') }}">
-            <figcaption> Figcaption<br>
-            Lilac Point Himalayan<br>
-            </figcaption>
-        </figure>
-    </div>
+</div>

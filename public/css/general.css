@@ -24,3 +24,10 @@ ul{list-style-type: none; padding: 0; margin: 0}
 .opacity-9{opacity: 0.9}
 
 .image{width:100%;}
+
+span.asterisk{color: red}
+span.required__field{font-style: italic; font-size: 11px;}
+
+.parsley-errors-list.filled li{
+  color: orangered !important; font-size: 11px;
+}
