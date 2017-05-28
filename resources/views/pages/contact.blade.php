@@ -10,9 +10,9 @@
 
 @section('jumbotron')
     <div class="jumbotron contact">
-        <p class="text-center info" >Termine nur nach Vereinbarung:
+        <h1 class="text-center info" >Termine nur nach Vereinbarung:
             <span>+ 49-160-8401080</span>
-        </p>
+        </h1>
 
         @include('errors._list')
         @include('flash::message')
@@ -78,7 +78,7 @@
 
     <script>
           function initMap() {
-            var myLatLng = {lat: 48.770708, lng: 9.162106};
+            var myLatLng = {lat: 48.77247, lng: 9.17007};
 
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 15,
@@ -88,7 +88,7 @@
             var marker = new google.maps.Marker({
               position: myLatLng,
               map: map,
-              title: 'Thorsten von der Ohe'
+              title: 'Thorsten von der Ohe, Augustenstrasse 1, Stuttgart, DE'
             });
           }
     </script>

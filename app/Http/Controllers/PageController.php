@@ -14,6 +14,11 @@ class PageController extends Controller
         return view('pages.welcome');
     }
 
+    public function about()
+    {
+        return view('pages.about');
+    }
+
     public function contact()
     {
         return view('pages.contact');
@@ -28,10 +33,9 @@ class PageController extends Controller
             'message' => $request->body,
         ];
 
-        $recipient = 'g@gmail.com';
         $email = new ContactRequested($contact);
 
-        Mail::to($recipient)->send($email);
+        Mail::to('g@gmail.com')->send($email);
 
         flash()->success('Thank you for your email. I will try to respond as soon as possible.');
         return back();

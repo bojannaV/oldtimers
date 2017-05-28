@@ -8,7 +8,11 @@
 @endsection
 
 @section('jumbotron')
-    <div class="jumbotron">
+    <div class="jumbotron cars">
+        <h1 class="text-center">Aktuell verfügbares Angebot an Fahrzeugen</h1>
+        <p class="info text-center">
+            - Umrüstung auf EU-Stoßfänger/Scheinwerfer oder Beibehaltung der <a href="#"><span style="text-decoration: underline; color: lightblue;">U.S-Optik</span></a> je nach Ihrem Wunch -
+        </p>
         <div class="row top">
             <div class="col-md-3 car__gallery">
                 <figure class="figure box">

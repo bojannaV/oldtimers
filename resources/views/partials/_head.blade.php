@@ -7,6 +7,8 @@
 
 <title>{{ config('app.name') }} @yield('title')</title>
 
+<link rel="icon" href="{{ asset('favicon.png') }}" type="image/png">
+
 <!-- Bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
